@@ -17,7 +17,7 @@ def graba(nomArchGrabar,estructura):
         pickle.dump(estructura,escritura)
         escritura.close()
     except:
-        print("Error al grabar el archivo: ", nomArchGrabar)
+        print()
     return
 def leeLugar(nomArchLeer):
     """
@@ -26,8 +26,7 @@ def leeLugar(nomArchLeer):
     -nomArchLeer(nombre del archivo) a leer
     Salida:NA
     """
-    lugares = {"San José": ['El Banco Nacional de Sangre', 'Hospital México', 'Hospital San Juan de Dios'], "Alajuela": ['Hospital San Rafael de Alajuela','Hospital de San Ramón','Hospital del Cantón Norteño'],'Cartago':['Hospital Max Peralta'],
-    'Heredia':['Hospital San Vicnete de Paúl'],'Guanacaste':['Hospital La Anexión en Nicoya','Hospital Enrique Baltodano de Liberia'],'Puntarenas':['Hospital Monseñor Sanabria'],'Limón':['Hospital Tony Facio','Hospital de Guápiles']}
+    lugares ={"San José": ['El banco Nacional de Sangre', 'Hospital México', 'Hospital San Juan de Dios'], "Alajuela": ['Hospital San Rafael de Alajuela','Hospital de San Ramón','Hospital del Cantón Norteño'],'Cartago':['Hospital Max Peralta'],'Heredia':['Hospital San Vicnete de Paúl'],'Guanacaste':['Hospital La Anexión en Nicoya','Hospital Enrique Baltodano de Liberia'],'Puntarenas':['Hospital Monseñor Sanabria'],'Limón':['Hospital Tony Facio','Hospital de Guápiles']}
     try:
         lectura=open(nomArchLeer,"rb")
         lugares = pickle.load(lectura)
